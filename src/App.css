@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+* {
+  text-rendering: optimizelegibility;
+  box-sizing: border-box;
+  word-break: break-word;
+  outline: none;
+  text-decoration: none;
+  margin: 0px;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}

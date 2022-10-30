@@ -37,13 +37,14 @@ const StyMenu = styled(IoMenuOutline)`
 const StyLinks = styled(Link)`
   padding: 8px 16px;
   text-decoration: none;
-  color: initial;
+  color: #3c4852;
+  font-weight: 600;
 `;
 
 const Logo = styled.img`
-  height: 52px;
-  width: 52px;
-  padding: 0 4px;
+  height: 48px;
+  width: 48px;
+  margin-right: 8px;
 `;
 
 const LinksContainer = styled.div`
