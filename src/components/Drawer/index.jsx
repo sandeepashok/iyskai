@@ -43,8 +43,8 @@ const StyLinks = styled(Link)`
   border-bottom: 0.01px solid #f8f8f8;
   margin: 0.2rem 4rem;
   &:hover {
-    border-top: 1px solid #80808047;
-    border-bottom: 1px solid #80808047;
+    border-top: 0.01px solid #80808047;
+    border-bottom: 0.01px solid #80808047;
   }
 `;
 
@@ -61,26 +61,55 @@ const CloseBtn = styled(RiCloseCircleLine)`
   cursor: pointer;
 `;
 
-const Drawer = () => {
+const ModalContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.3;
+  z-index: 98;
+`;
+
+const Drawer = ({ onClose }) => {
   return (
-    <DrawerContainer>
-      <CloseBtnContainer>
-        <CloseBtn />
-      </CloseBtnContainer>
-      {/* <Menu>Menu</Menu> */}
-      <StyLinks to="/">Home</StyLinks>
-      <StyLinks to="/about">About Us</StyLinks>
-      <br />
-      <SubHeading>Events:</SubHeading>
-      <StyLinks to="/camp">Camp</StyLinks>
-      <StyLinks to="/tournament">Tournament</StyLinks>
-      <SubHeading>Gallery:</SubHeading>
-      <StyLinks to="/photo-gallery">Photo Gallery</StyLinks>
-      <StyLinks to="/video-gallery">Video Gallery</StyLinks>
-      <br />
-      <StyLinks to="/dojo-atiquette">Dojo Atiquette</StyLinks>
-      <StyLinks to="/contact">Contact</StyLinks>
-    </DrawerContainer>
+    <>
+      <ModalContainer onClick={onClose} />
+      <DrawerContainer>
+        <CloseBtnContainer>
+          <CloseBtn onClick={onClose} />
+        </CloseBtnContainer>
+        <StyLinks to="/" onClick={onClose}>
+          Home
+        </StyLinks>
+        <StyLinks to="/about" onClick={onClose}>
+          About Us
+        </StyLinks>
+        <br />
+        <SubHeading>Events:</SubHeading>
+        <StyLinks to="/camp" onClick={onClose}>
+          Camp
+        </StyLinks>
+        <StyLinks to="/tournament" onClick={onClose}>
+          Tournament
+        </StyLinks>
+        <SubHeading>Gallery:</SubHeading>
+        <StyLinks to="/photo-gallery" onClick={onClose}>
+          Photo Gallery
+        </StyLinks>
+        <StyLinks to="/video-gallery" onClick={onClose}>
+          Video Gallery
+        </StyLinks>
+        <br />
+        <StyLinks to="/dojo-atiquette" onClick={onClose}>
+          Dojo Atiquette
+        </StyLinks>
+        <StyLinks to="/contact" onClick={onClose}>
+          Contact
+        </StyLinks>
+      </DrawerContainer>
+    </>
   );
 };
 

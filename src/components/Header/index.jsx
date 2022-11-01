@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { IoMenuOutline } from "react-icons/io5";
 import styled from "@emotion/styled";
 import Drawer from "../Drawer";
+import { useState } from "react";
 
 const Navbar = styled.nav`
   background: #ffffff;
@@ -40,7 +41,7 @@ const StyLinks = styled(Link)`
   padding: 8px 16px;
   text-decoration: none;
   color: #3c4852;
-  font-weight: 600;
+  font-weight: 500;
 `;
 
 const Logo = styled.img`
@@ -62,11 +63,23 @@ const Title = styled.b`
   color: #ff1616;
 `;
 
+const DesktopLinks = styled(LinksContainer)`
+  @media (max-width: 500px) {
+    display: none;
+  }
+`;
+
 const linkStyle = {
   textDecoration: "none",
 };
 
 const Header = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenuState = () => {
+    setShowMenu((flag) => !flag);
+  };
+
   return (
     <>
       <Navbar>
@@ -82,13 +95,15 @@ const Header = () => {
           </Link>
           <NavLinks>
             <LinksContainer>
-              <StyLinks to="/">Home</StyLinks>
-              <StyLinks to="about">About</StyLinks>
-              <StyMenu />
+              <DesktopLinks>
+                <StyLinks to="/">Home</StyLinks>
+                <StyLinks to="about">About</StyLinks>
+              </DesktopLinks>
+              <StyMenu onClick={toggleMenuState} />
             </LinksContainer>
           </NavLinks>
         </NavbarContainer>
-        <Drawer />
+        {showMenu && <Drawer onClose={toggleMenuState} />}
       </Navbar>
     </>
   );

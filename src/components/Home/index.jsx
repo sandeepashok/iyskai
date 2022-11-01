@@ -18,17 +18,26 @@ const Banner = styled.div`
   margin: auto;
   display: flex;
   align-items: center;
+  box-sizing: border-box;
+  @media (max-width: 500px) {
+    padding: 16px;
+  }
 `;
 
 const Card = styled.div`
   height: 75%;
   width: 350px;
+  max-width: 100vw;
   display: flex;
   justify-content: space-between;
   padding: 24px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 16px;
   flex-direction: column;
+  box-sizing: border-box;
+  @media (max-width: 500px) {
+    padding: 16px;
+  }
 `;
 
 const Flex = styled.div`

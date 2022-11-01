@@ -23,6 +23,11 @@ const StyButton = styled.button`
     box-shadow: 0px 16px 32px 0px var(--color-shadow);
     transform: translate(0px, -2px);
   }
+
+  @media (max-width: 500px) {
+    width: 120px;
+    height: 40px;
+  }
 `;
 
 const Button = ({ children }) => <StyButton>{children}</StyButton>;
