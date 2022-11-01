@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import { IoMenuOutline } from "react-icons/io5";
 import styled from "@emotion/styled";
+import Drawer from "../Drawer";
 
 const Navbar = styled.nav`
   background: #ffffff;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 24px;
   margin-bottom: 24px;
+  position: relative;
 `;
 
 const NavbarContainer = styled.div`
@@ -66,26 +68,29 @@ const linkStyle = {
 
 const Header = () => {
   return (
-    <Navbar>
-      <NavbarContainer>
-        <Link to="/" style={linkStyle}>
-          <BrandLogo>
-            <Logo
-              src="https://i.ibb.co/tYsm4J5/Dark-Green-and-Marigold-Regular-Sports-Logo-1.png"
-              alt="Logo"
-            />
-            <Title>IYSKAI</Title>
-          </BrandLogo>
-        </Link>
-        <NavLinks>
-          <LinksContainer>
-            <StyLinks to="/">Home</StyLinks>
-            <StyLinks to="about">About</StyLinks>
-            <StyMenu />
-          </LinksContainer>
-        </NavLinks>
-      </NavbarContainer>
-    </Navbar>
+    <>
+      <Navbar>
+        <NavbarContainer>
+          <Link to="/" style={linkStyle}>
+            <BrandLogo>
+              <Logo
+                src="https://i.ibb.co/tYsm4J5/Dark-Green-and-Marigold-Regular-Sports-Logo-1.png"
+                alt="Logo"
+              />
+              <Title>IYSKAI</Title>
+            </BrandLogo>
+          </Link>
+          <NavLinks>
+            <LinksContainer>
+              <StyLinks to="/">Home</StyLinks>
+              <StyLinks to="about">About</StyLinks>
+              <StyMenu />
+            </LinksContainer>
+          </NavLinks>
+        </NavbarContainer>
+        <Drawer />
+      </Navbar>
+    </>
   );
 };
 

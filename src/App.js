@@ -10,8 +10,14 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/about" element={<About />} />
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/camp" element={<></>} />
+          <Route path="/tournament" element={<></>} />
+          <Route path="photo-gallery" element={<></>} />
+          <Route path="video-gallery" element={<></>} />
+          <Route path="dojo-atiquette" element={<></>} />
+          <Route path="contact" element={<></>} />
         </Routes>
       </Router>
     </div>

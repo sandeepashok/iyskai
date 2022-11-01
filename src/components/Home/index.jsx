@@ -10,6 +10,7 @@ const Banner = styled.div`
   background: url("https://i.ibb.co/GHjpdxG/single-continuous-line-drawing-young-sportive-man-wearing-kimono-practice-aikido-fighting-stance-pos.png");
   padding: 24px;
   height: 40vh;
+  min-height: 350px;
   width: 100vw;
   background-repeat: no-repeat;
   background-position: right;
