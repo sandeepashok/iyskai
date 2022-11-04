@@ -99,9 +99,9 @@ const Drawer = ({ onClose }) => {
         <StyLinks to="/photo-gallery" onClick={onClose}>
           Photo Gallery
         </StyLinks>
-        <StyLinks to="/video-gallery" onClick={onClose}>
+        {/* <StyLinks to="/video-gallery" onClick={onClose}>
           Video Gallery
-        </StyLinks>
+        </StyLinks> */}
         <br />
         <StyLinks to="/dojo-etiquette" onClick={onClose}>
           Dojo Etiquette

@@ -23,6 +23,7 @@ const Banner = styled.div`
   box-sizing: border-box;
   @media (max-width: 500px) {
     padding: 16px;
+    background: unset;
   }
 `;
 
@@ -163,10 +164,10 @@ const weaponDetails = [
 const WeaponCards = () => {
   return (
     <WeaponCard>
-      {weaponDetails.map(({ imgURL, title, altText }) => {
+      {weaponDetails.map(({ imgURL, title, altText }, index) => {
         // console.log(imgURL, title, altText, "here");
         return (
-          <CardContainer>
+          <CardContainer key={index}>
             <Image src={imgURL} alt={altText} />
             <B>{title}</B>
           </CardContainer>

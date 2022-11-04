@@ -5,7 +5,8 @@ export const PageContainter = styled.div`
   padding: 24px;
   padding-top: 0;
   margin: auto;
-  height: 100vh @media (max-width: 500px) {
+  height: 100vh;
+  @media (max-width: 500px) {
     padding: 8px;
   }
 `;
