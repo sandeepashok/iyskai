@@ -6,9 +6,6 @@ const FooterContainer = styled.div`
   background-color: #ffffff;
   margin-top: 24px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 24px;
-  position: fixed;
-  width: 100vw;
-  bottom: 0;
 `;
 
 const FooterContents = styled.div`

@@ -110,7 +110,6 @@ const PageContainter = styled.div`
   margin-top: 24px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   background-color: #ffffff;
-  border-radius: 16px;
   @media (max-width: 500px) {
     max-width: 100vw;
   }

@@ -48,13 +48,7 @@ function App() {
             <Route path="contact" element={<></>} />
           </Routes>
         </Router>
-        {/* {data && (
-        <div>
-          {data.trainers[0].content.split("\n").map((data) => (
-            <div>{data}</div>
-          ))}
-        </div>
-      )} */}
+
         <Footer />
       </TrainersContext.Provider>
     </div>
