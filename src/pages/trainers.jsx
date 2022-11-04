@@ -199,7 +199,7 @@ const Trainers = ({ setData }) => {
           </h2>
           <TrainersContainer>
             {trainersToDisplay?.map((trainer) => (
-              <Trainer trainer={trainer} key={trainer.name} />
+              <Trainer trainer={trainer} key={trainer.id} />
             ))}
           </TrainersContainer>
         </>
@@ -210,7 +210,7 @@ const Trainers = ({ setData }) => {
 
 const Trainer = ({ trainer }) => {
   return (
-    <Link to="/trainers/12">
+    <Link to={`/trainers/${trainer.id}`}>
       <Card>
         <div>
           <img
