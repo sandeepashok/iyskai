@@ -18,7 +18,7 @@ const StyButton = styled.button`
     background-color 300ms ease-in-out 0s;
   width: 146px;
   height: 40px;
-  margin-top: 32px;
+  margin-top: 8px;
   &:hover {
     box-shadow: 0px 16px 32px 0px var(--color-shadow);
     transform: translate(0px, -2px);

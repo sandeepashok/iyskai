@@ -9,7 +9,7 @@ const DrawerContainer = styled.div`
   background-color: #ffffff;
   text-align: center;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   z-index: 99;
   top: 0;
   right: 0;
@@ -52,7 +52,7 @@ const CloseBtnContainer = styled.div`
   text-align: end;
   margin: 0.5rem 0.5rem 0 0;
   position: sticky;
-  top: 0;
+  top: 8px;
   right: 0;
 `;
 
@@ -65,7 +65,7 @@ const ModalContainer = styled.div`
   width: 100vw;
   height: 100vh;
   background: black;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   opacity: 0.3;
@@ -102,8 +102,8 @@ const Drawer = ({ onClose }) => {
           Video Gallery
         </StyLinks>
         <br />
-        <StyLinks to="/dojo-atiquette" onClick={onClose}>
-          Dojo Atiquette
+        <StyLinks to="/dojo-etiquette" onClick={onClose}>
+          Dojo Etiquette
         </StyLinks>
         <StyLinks to="/contact" onClick={onClose}>
           Contact
