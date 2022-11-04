@@ -90,6 +90,7 @@ const Trainers = ({ setData }) => {
     if (!trainers) {
       loadData();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [trainers]);
 
   useEffect(() => {
