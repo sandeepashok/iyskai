@@ -1,3 +1,10 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -31,6 +38,10 @@
   margin: 0px;
   -webkit-font-smoothing: antialiased;
   overscroll-behavior: none;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
 }
 
 @media (max-width: 400px) {

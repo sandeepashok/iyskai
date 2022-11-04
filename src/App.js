@@ -1,11 +1,13 @@
 import "./App.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
 import About from "./pages/about";
 import { createContext, useEffect, useState } from "react";
 import { fetchData } from "./fetch";
 import Trainers from "./pages/trainers";
+import Dojo from "./pages/dojo-etiquette";
 export const TrainersContext = createContext([]);
 
 function App() {
@@ -31,7 +33,7 @@ function App() {
             <Route path="/trainers" element={<Trainers setData={setData} />} />
             <Route path="photo-gallery" element={<></>} />
             <Route path="video-gallery" element={<></>} />
-            <Route path="dojo-atiquette" element={<></>} />
+            <Route path="dojo-etiquette" element={<Dojo />} />
             <Route path="contact" element={<></>} />
           </Routes>
         </Router>
@@ -42,6 +44,7 @@ function App() {
           ))}
         </div>
       )} */}
+        <Footer />
       </TrainersContext.Provider>
     </div>
   );
