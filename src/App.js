@@ -28,35 +28,38 @@ function App() {
   const tournamentData = { title: "Tournament", image: "https://cdn.pixabay.com/photo/2022/09/24/21/09/karate-7477212__340.jpg" }
 
   return (
-    <div className="App">
-      <TrainersContext.Provider value={data}>
-        <Router>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/camp" element={<Camp info={campData} />} />
-            <Route path="/tournament" element={<Camp info={tournamentData} />} />
-            {/* <Route path="/trainers" element={<Trainers setData={setData} />}>
+    <>
+      <div className="App">
+        <TrainersContext.Provider value={data}>
+          <Router>
+            <Header />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/camp" element={<Camp info={campData} />} />
+              <Route path="/tournament" element={<Camp info={tournamentData} />} />
+              {/* <Route path="/trainers" element={<Trainers setData={setData} />}>
               <Route path=":id" element={<Trainer />} />
               <Route index element={<Trainers setData={setData} />} />
             </Route> */}
-            <Route path="/trainers/:id" element={<Trainer />} />
-            <Route
-              path="/trainers"
-              index
-              element={<Trainers setData={setData} />}
-            />
-            <Route path="photo-gallery" element={<PhotoGallery />} />
-            {/* <Route path="video-gallery" element={<></>} /> */}
-            <Route path="dojo-etiquette" element={<Dojo />} />
-            <Route path="contact" element={<Contact />} />
-          </Routes>
-        </Router>
+              <Route path="/trainers/:id" element={<Trainer />} />
+              <Route
+                path="/trainers"
+                index
+                element={<Trainers setData={setData} />}
+              />
+              <Route path="photo-gallery" element={<PhotoGallery />} />
+              {/* <Route path="video-gallery" element={<></>} /> */}
+              <Route path="dojo-etiquette" element={<Dojo />} />
+              <Route path="contact" element={<Contact />} />
+            </Routes>
+          </Router>
 
-        <Footer />
-      </TrainersContext.Provider>
-    </div>
+
+        </TrainersContext.Provider>
+      </div>
+      <Footer />
+    </>
   );
 }
 

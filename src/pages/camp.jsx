@@ -1,11 +1,11 @@
 import styled from "@emotion/styled";
-import { PageContainter, PageHeading, B } from "./about";
+import { PageContainter, PageHeading } from "./about";
 
 const Pagecontainter = styled(PageContainter)`
   max-width: 1136px;
   height: unset;
   @media (max-width: 500px) {
-    padding: 8px;
+    padding: 16px;
   }
 `;
 

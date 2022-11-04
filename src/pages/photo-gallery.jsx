@@ -3,7 +3,6 @@ import { PageContainter, PageHeading } from "./about";
 
 const Pagecontainter = styled(PageContainter)`
   max-width: 1136px;
-  min-height: 100vh;
   object-fit: contain;
 `;
 
