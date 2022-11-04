@@ -16,6 +16,7 @@ const DrawerContainer = styled.div`
   overflow: scroll;
   overflow-x: hidden;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding-top: 16px;
   &::-webkit-scrollbar {
     width: 1px;
   }
@@ -50,7 +51,7 @@ const StyLinks = styled(Link)`
 
 const CloseBtnContainer = styled.div`
   text-align: end;
-  margin: 0.5rem 0.5rem 0 0;
+  margin: 0.5rem 0.5rem 32px 0;
   position: sticky;
   top: 0;
   right: 0;

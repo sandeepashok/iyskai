@@ -30,6 +30,8 @@ const StyButton = styled.button`
   }
 `;
 
-const Button = ({ children }) => <StyButton>{children}</StyButton>;
+const Button = ({ children, ...rest }) => {
+  return <StyButton {...rest}>{children}</StyButton>;
+};
 
 export default Button;

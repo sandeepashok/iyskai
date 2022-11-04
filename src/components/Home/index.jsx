@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 import Button from "../UI/Button";
 
 const Section = styled.section`
@@ -55,10 +56,13 @@ const Home = () => {
           <div></div>
           <Flex>
             <Button>Start now</Button>
-            <Button>Find trainers</Button>
+            <Link to="trainers">
+              <Button>Find trainers</Button>
+            </Link>
           </Flex>
         </Card>
       </Banner>
+      <p></p>
     </Section>
   );
 };
