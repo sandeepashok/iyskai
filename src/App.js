@@ -8,6 +8,7 @@ import { createContext, useEffect, useState } from "react";
 import { fetchData } from "./fetch";
 import Trainers from "./pages/trainers";
 import Dojo from "./pages/dojo-etiquette";
+import Trainer from "./pages/trainer";
 export const TrainersContext = createContext([]);
 
 function App() {
@@ -30,7 +31,17 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/camp" element={<></>} />
             <Route path="/tournament" element={<></>} />
-            <Route path="/trainers" element={<Trainers setData={setData} />} />
+            <Route path="/trainers" element={<></>} />
+            {/* <Route path="/trainers" element={<Trainers setData={setData} />}>
+              <Route path=":id" element={<Trainer />} />
+              <Route index element={<Trainers setData={setData} />} />
+            </Route> */}
+            <Route path="/trainers/:id" element={<Trainer />} />
+            <Route
+              path="/trainers"
+              index
+              element={<Trainers setData={setData} />}
+            />
             <Route path="photo-gallery" element={<></>} />
             <Route path="video-gallery" element={<></>} />
             <Route path="dojo-etiquette" element={<Dojo />} />

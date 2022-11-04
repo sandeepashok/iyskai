@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import { useContext } from "react";
 import { TrainersContext } from "../App";
 import { fetchData } from "../fetch";
+import { Link } from "react-router-dom";
 
 const Select = styled.select`
   width: 300px;
@@ -208,32 +209,35 @@ const Trainers = ({ setData }) => {
 
 const Trainer = ({ trainer }) => {
   return (
-    <Card>
-      <div>
-        <img
-          src={trainer.imageLink}
-          alt={trainer.name}
+    <Link to="/trainers/12">
+      <Card>
+        <div>
+          <img
+            src={trainer.imageLink}
+            alt={trainer.name}
+            style={{
+              objectFit: "contain",
+              height: "250px",
+              width: "250px",
+            }}
+          />
+        </div>
+        <h3
           style={{
-            objectFit: "contain",
-            height: "250px",
-            width: "250px",
+            margin: "auto",
+            marginTop: "8px",
+            marginBottom: "4px",
+            fontWeight: 500,
+            color: "#3c4852",
           }}
-        />
-      </div>
-      <h3
-        style={{
-          margin: "auto",
-          marginTop: "8px",
-          marginBottom: "4px",
-          fontWeight: 500,
-        }}
-      >
-        {trainer.name}
-      </h3>
-      <p style={{ textAlign: "center", fontSize: "14px" }}>
-        {trainer.district}
-      </p>
-    </Card>
+        >
+          {trainer.name}
+        </h3>
+        <p style={{ textAlign: "center", fontSize: "14px", color: "#3c4852" }}>
+          {trainer.district}
+        </p>
+      </Card>
+    </Link>
   );
 };
 

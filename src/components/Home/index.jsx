@@ -112,7 +112,7 @@ const PageContainter = styled.div`
   background-color: #ffffff;
   border-radius: 16px;
   @media (max-width: 500px) {
-    max-width: 310 !important;
+    max-width: 100vw;
   }
 `;
 
