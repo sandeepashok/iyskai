@@ -155,10 +155,6 @@ const StyBannerImage = styled.img`
   }
 `;
 
-const center = {
-  textAlign: "center",
-};
-
 const Home = () => {
   return (
     <>
