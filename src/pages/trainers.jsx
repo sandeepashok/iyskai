@@ -34,9 +34,9 @@ const PillButtons = styled.button`
   cursor: pointer;
   border-radius: 6px;
   min-height: 40px;
-  color: #3c4852;
+  color: #ffffff;
   user-select: none;
-  background-color: #ffffff;
+  background-color: #272727;
   margin-right: 8px;
   margin-bottom: 8px;
   transition: box-shadow 300ms ease-in-out 0s, transform 300ms ease-in-out 0s,
@@ -67,7 +67,7 @@ const TrainersContainer = styled.div`
 
 const Card = styled.div`
   display: flex;
-  background: #ffffff;
+  background: #272727;
   padding: 16px;
   justify-content: center;
   flex-direction: column;
@@ -153,7 +153,7 @@ const Trainers = ({ setData }) => {
           <div>
             <img
               alt="map"
-              src="https://www.burningcompass.com/countries/india/maps/karnataka-outline-map.jpg"
+              src="https://i.ibb.co/sbSrBL5/karnataka.png"
               width="300px"
               style={{
                 display: "block",
@@ -229,12 +229,12 @@ const Trainer = ({ trainer }) => {
             marginTop: "8px",
             marginBottom: "4px",
             fontWeight: 500,
-            color: "#3c4852",
+            color: "#ffffff",
           }}
         >
           {trainer.name}
         </h3>
-        <p style={{ textAlign: "center", fontSize: "14px", color: "#3c4852" }}>
+        <p style={{ textAlign: "center", fontSize: "14px", color: "#ffffff" }}>
           {trainer.district}
         </p>
       </Card>

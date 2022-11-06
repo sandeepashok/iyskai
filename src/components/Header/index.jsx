@@ -5,9 +5,10 @@ import Drawer from "../Drawer";
 import { useState } from "react";
 
 const Navbar = styled.nav`
-  background: #ffffff;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 24px;
-  margin-bottom: 24px;
+  background: #181818;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   position: relative;
 `;
 
@@ -40,7 +41,7 @@ const StyMenu = styled(IoMenuOutline)`
 const StyLinks = styled(Link)`
   padding: 8px 16px;
   text-decoration: none;
-  color: #3c4852;
+  color: #ffffff;
   font-weight: 500;
 `;
 
@@ -48,6 +49,7 @@ const Logo = styled.img`
   height: 48px;
   width: 48px;
   margin-right: 8px;
+  border-radius: 50%;
 `;
 
 const LinksContainer = styled.div`
@@ -60,7 +62,7 @@ const Title = styled.b`
   font-size: 24px;
   align-items: center;
   padding: 0 4px;
-  color: #ff1616;
+  color: #00aed9;
 `;
 
 const DesktopLinks = styled(LinksContainer)`
@@ -86,10 +88,7 @@ const Header = () => {
         <NavbarContainer>
           <Link to="/" style={linkStyle}>
             <BrandLogo>
-              <Logo
-                src="https://i.ibb.co/tYsm4J5/Dark-Green-and-Marigold-Regular-Sports-Logo-1.png"
-                alt="Logo"
-              />
+              <Logo src="/assets/logo.png" alt="Logo" />
               <Title>IYSKAI</Title>
             </BrandLogo>
           </Link>

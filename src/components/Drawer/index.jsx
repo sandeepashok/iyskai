@@ -6,7 +6,7 @@ const DrawerContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 320px;
-  background-color: #ffffff;
+  background-color: #181818;
   text-align: center;
   height: 100vh;
   position: fixed;
@@ -28,24 +28,22 @@ const DrawerContainer = styled.div`
 const SubHeading = styled.div`
   padding: 8px 16px;
   text-decoration: none;
-  color: #3c4852;
+  color: #ffffff;
   font-size: 20px;
   font-weight: 500;
-  border-top: 0.01px solid #f8f8f8;
-  border-bottom: 0.01px solid #f8f8f8;
   margin: 0.5rem 6rem;
 `;
 
 const StyLinks = styled(Link)`
   padding: 12px 16px;
   text-decoration: none;
-  color: #3c4852;
-  border-top: 0.01px solid #f8f8f8;
-  border-bottom: 0.01px solid #f8f8f8;
+  color: #ffffff;
+  border-top: 0.01px solid rgba(0, 0, 0, 0);
+  border-bottom: 0.01px solid rgba(0, 0, 0, 0);
   margin: 0.2rem 4rem;
   &:hover {
-    border-top: 0.01px solid #80808047;
-    border-bottom: 0.01px solid #80808047;
+    background-color: #3f3f3f;
+    border-radius: 10px 2px;
   }
 `;
 
