@@ -27,13 +27,13 @@ const Image = styled.img`
 `;
 
 const photos = [
-  "http://jkaconn.com/fcamp04d.jpg",
+  "https://cdn.pixabay.com/photo/2017/09/05/10/55/karate-2717178_960_720.jpg",
   "https://cdn.pixabay.com/photo/2022/09/24/21/09/karate-7477212__340.jpg",
-  "http://jkaconn.com/fcamp04d.jpg",
+  "https://cdn.pixabay.com/photo/2017/09/05/10/55/karate-2717178_960_720.jpg",
   "https://cdn.pixabay.com/photo/2022/09/24/21/09/karate-7477212__340.jpg",
-  "http://jkaconn.com/fcamp04d.jpg",
+  "https://cdn.pixabay.com/photo/2017/09/05/10/55/karate-2717178_960_720.jpg",
   "https://cdn.pixabay.com/photo/2022/09/24/21/09/karate-7477212__340.jpg",
-  "http://jkaconn.com/fcamp04d.jpg",
+  "https://cdn.pixabay.com/photo/2017/09/05/10/55/karate-2717178_960_720.jpg",
   "https://cdn.pixabay.com/photo/2022/09/24/21/09/karate-7477212__340.jpg",
 ];
 

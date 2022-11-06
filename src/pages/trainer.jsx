@@ -52,7 +52,9 @@ const Trainer = ({ setData }) => {
   console.log({ currentTrainer });
 
   return (
-    <PageContainter style={{ background: "white", paddingTop: "16px" }}>
+    <PageContainter
+      style={{ background: "#181818", paddingTop: "16px", borderRadius: "8px" }}
+    >
       <h2 style={{ textAlign: "center" }}>{currentTrainer?.name}</h2>
       <Card>
         <ImageWrapper>
