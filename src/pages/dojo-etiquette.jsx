@@ -8,9 +8,9 @@ export const PageContainter = styled.div`
 `;
 
 const Info = styled.div`
-  background-color: #272727;
+  background-color: #181818;
   padding: 24px;
-  border-radius: 16px;
+  border-radius: 8px;
 `;
 
 export const PageHeading = styled.h2`

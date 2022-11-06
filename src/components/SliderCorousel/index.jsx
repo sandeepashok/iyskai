@@ -79,12 +79,10 @@ const SliderCorousel = () => {
       >
         {weaponDetails.map(({ imgURL, altText, title }, index) => {
           return (
-            <>
-              <CoruselContainer>
-                <img src={imgURL} alt={altText} key={index} className="slide" />
-                <b>{title}</b>
-              </CoruselContainer>
-            </>
+            <CoruselContainer key={index}>
+              <img src={imgURL} alt={altText} className="slide" />
+              <h4 style={{ fontWeight: 400 }}>{title}</h4>
+            </CoruselContainer>
           );
         })}
       </div>

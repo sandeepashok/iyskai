@@ -12,11 +12,10 @@ const Section = styled.section`
 `;
 
 const Banner = styled.div`
-  background: url("/assets/hero.png");
   padding: 24px;
   height: 40vh;
   min-height: 350px;
-  width: 100vw;
+  width: fit-content;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #181818;
@@ -24,16 +23,26 @@ const Banner = styled.div`
   margin: auto;
   display: flex;
   align-items: center;
+  justify-content: center;
+  position: relative;
   box-sizing: border-box;
+  position: relative;
   @media (max-width: 500px) {
-    padding: 16px;
+    padding: 0;
   }
 `;
 
 const Flex = styled.div`
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  left: 20px;
+  @media (max-width: 500px) {
+    left: unset;
+    justify-content: center;
+    bottom: 20px;
+  }
 `;
 
 const WhyUsSection = styled.div`
@@ -43,20 +52,23 @@ const WhyUsSection = styled.div`
 `;
 
 const OtherImages = styled.img`
-  border: 5px solid #272727;
-  border-radius: 16px;
+  border: 5px solid #181818;
+  border-radius: 8px;
 `;
 
 const Paragraph = styled(Para)`
   margin: 0 24px 24px 24px;
+  @media (max-width: 500px) {
+    margin: 0 16px;
+  }
 `;
 
 const Info = styled.div``;
 
 const WeaponTraining = styled.div`
   margin-top: 8px;
-  background-color: #272727;
-  border-radius: 16px;
+  background-color: #181818;
+  border-radius: 8px;
   color: white;
   display: flex;
   @media (max-width: 500px) {
@@ -80,7 +92,7 @@ const ImgAndInfoOdd = styled.div`
 const ParasOdd = styled(P)`
   margin: 24px 32px 32px 32px;
   @media (max-width: 500px) {
-    margin: 32px;
+    margin: 16px 0;
   }
 `;
 
@@ -98,14 +110,14 @@ const ImgAndInfoeven = styled.div`
 const ParasEven = styled(P)`
   margin: 24px 32px 32px 0;
   @media (max-width: 500px) {
-    margin: 32px;
+    margin: 16px 0;
   }
 `;
 
 const OtherSections = styled.div`
   margin-top: 32px;
-  background-color: #272727;
-  border-radius: 16px;
+  background-color: #181818;
+  border-radius: 8px;
   color: white;
   display: flex;
   @media (max-width: 500px) {
@@ -128,10 +140,16 @@ const Buttons = styled(Button)`
 `;
 
 const PageContainter = styled.div`
-  max-width: 1136px;
+  max-width: 920px;
   padding-top: 0;
   margin: auto;
   margin-top: 24px;
+  @media (max-width: 500px) {
+    max-width: 100vw;
+  }
+`;
+
+const StyBannerImage = styled.img`
   @media (max-width: 500px) {
     max-width: 100vw;
   }
@@ -146,8 +164,9 @@ const Home = () => {
     <>
       <Section>
         <Banner>
+          <StyBannerImage src="/assets/hero.png" />
           <Flex>
-            <Buttons Filled>Start now</Buttons>
+            <Buttons Outlined>Start now</Buttons>
             <Link to="trainers">
               <Buttons Outlined>Find trainers</Buttons>
             </Link>
@@ -160,7 +179,7 @@ const Home = () => {
           <WeaponTraining>
             <Info>
               <Paragraph>
-                <Paraheading>Weapons Training (Kobudo) :</Paraheading>
+                <Paraheading>Weapons Training (Kobudo):</Paraheading>
                 <Br />
                 <P>
                   Kobudo literally meaning “ancient martial way,” refers to the
@@ -189,9 +208,7 @@ const Home = () => {
                 <Paraheading>Flexiblity :</Paraheading>
                 <Br />
                 <ImgAndInfoOdd>
-                  <div style={center}>
-                    <OtherImages src="/assets/flex.jpg" alt="flexiblity" />
-                  </div>
+                  <OtherImages src="/assets/flex.jpg" alt="flexiblity" />
                   <ParasOdd>
                     The flexible Karate student has clear advantages over the
                     not so flexible Karatekas. He or she will have a greater
@@ -207,12 +224,8 @@ const Home = () => {
                 <Paraheading>Body Conditioning :</Paraheading>
                 <Br />
                 <ImgAndInfoeven>
-                  <div style={center}>
-                    <OtherImages
-                      src="/assets/body.jpg"
-                      alt="body conditioning"
-                    />
-                  </div>
+                  <OtherImages src="/assets/body.jpg" alt="body conditioning" />
+
                   <ParasEven>
                     Body conditioning is a broad term that refers to a wide
                     range of physical activities and exercises that train the
@@ -229,9 +242,8 @@ const Home = () => {
                 <Paraheading>Meditation :</Paraheading>
                 <Br />
                 <ImgAndInfoOdd>
-                  <div style={center}>
-                    <OtherImages src="/assets/med.jpg" alt="meditation" />
-                  </div>
+                  <OtherImages src="/assets/med.jpg" alt="meditation" />
+
                   <ParasOdd>
                     Meditation is an important element of many traditional
                     martial arts such as Karate. In Karate, mediation is often
@@ -248,12 +260,8 @@ const Home = () => {
                 <Paraheading>Overseas Training :</Paraheading>
                 <Br />
                 <ImgAndInfoeven>
-                  <div style={center}>
-                    <OtherImages
-                      src="/assets/over.jpg"
-                      alt="overseas training"
-                    />
-                  </div>
+                  <OtherImages src="/assets/over.jpg" alt="overseas training" />
+
                   <ParasEven>
                     It is an act of a student pursuing karate opportunities in a
                     country other than it's own (ex. Japan). This can boost the

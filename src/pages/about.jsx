@@ -21,6 +21,7 @@ export const Para = styled.section`
 
 export const ParaHeading = styled.h3`
   margin-bottom: 16px;
+  font-weight: 500;
 `;
 
 export const P = styled.p`
@@ -73,9 +74,9 @@ export const JapneseNumbers = styled.div`
   flex-wrap: wrap;
 `;
 const Info = styled.div`
-  background-color: #272727;
+  background-color: #181818;
   padding: 24px;
-  border-radius: 16px;
+  border-radius: 8px;
 `;
 
 const About = () => {
@@ -482,43 +483,43 @@ const About = () => {
           <JapneseNumbers>
             <ImageAndNameHolder>
               <ThumbImage src="/assets/ich.png" alt="ich" />
-              <b>Ich</b>
+              <b style={{ letterSpacing: "initial" }}>Ich</b>
             </ImageAndNameHolder>
             <ImageAndNameHolder>
               <ThumbImage src="/assets/ni.png" alt="ni" />
-              <b>Ni</b>
+              <b style={{ letterSpacing: "initial" }}>Ni</b>
             </ImageAndNameHolder>
             <ImageAndNameHolder>
               <ThumbImage src="/assets/san.png" alt="san" />
-              <b>San</b>
+              <b style={{ letterSpacing: "initial" }}>San</b>
             </ImageAndNameHolder>
             <ImageAndNameHolder>
               <ThumbImage src="/assets/shi.png" alt="shi" />
-              <b>Shi</b>
+              <b style={{ letterSpacing: "initial" }}>Shi</b>
             </ImageAndNameHolder>
             <ImageAndNameHolder>
               <ThumbImage src="/assets/go.png" alt="go" />
-              <b>Go</b>
+              <b style={{ letterSpacing: "initial" }}>Go</b>
             </ImageAndNameHolder>
             <ImageAndNameHolder>
               <ThumbImage src="/assets/roku.png" alt="roku" />
-              <b>Roku</b>
+              <b style={{ letterSpacing: "initial" }}>Roku</b>
             </ImageAndNameHolder>
             <ImageAndNameHolder>
               <ThumbImage src="/assets/sichi.png" alt="sichi" />
-              <b>Sichi</b>
+              <b style={{ letterSpacing: "initial" }}>Sichi</b>
             </ImageAndNameHolder>
             <ImageAndNameHolder>
               <ThumbImage src="/assets/hachi.png" alt="hachi" />
-              <b>Hachi</b>
+              <b style={{ letterSpacing: "initial" }}>Hachi</b>
             </ImageAndNameHolder>
             <ImageAndNameHolder>
               <ThumbImage src="/assets/ku.png" alt="ku" />
-              <b>Ku</b>
+              <b style={{ letterSpacing: "initial" }}>Ku</b>
             </ImageAndNameHolder>
             <ImageAndNameHolder>
               <ThumbImage src="/assets/ju.png" alt="ju" />
-              <b>Ju</b>
+              <b style={{ letterSpacing: "initial" }}>Ju</b>
             </ImageAndNameHolder>
           </JapneseNumbers>
           <P>

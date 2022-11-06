@@ -10,8 +10,8 @@ const Pagecontainter = styled(PageContainter)`
 `;
 
 const ImageContainer = styled.div`
-  background: #272727;
-  border-radius: 16px;
+  background: #181818;
+  border-radius: 8px;
   padding: 16px;
   text-align: center;
   @media (max-width: 500px) {
@@ -20,7 +20,7 @@ const ImageContainer = styled.div`
 `;
 
 const Image = styled.img`
-  border: 5px solid #272727;
+  border: 5px solid #181818;
   @media (max-width: 500px) {
     max-width: 95vw;
     padding: 0;

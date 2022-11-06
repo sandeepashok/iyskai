@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { PageContainter, PageHeading } from "./about";
 
 const ContactContainter = styled.div`
-  background-color: #272727;
+  background-color: #181818;
 `;
 
 const Contact = () => {

@@ -7,9 +7,9 @@ const Pagecontainter = styled(PageContainter)`
 `;
 
 const GalleryContainer = styled.div`
-  background: #272727;
+  background: #181818;
   padding: 16px;
-  border-radius: 16px;
+  border-radius: 8px;
   text-align: center;
   display: flex;
   flex-wrap: wrap;

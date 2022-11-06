@@ -39,6 +39,7 @@
   margin: 0px;
   -webkit-font-smoothing: antialiased;
   overscroll-behavior: none;
+  letter-spacing: 0.7px;
 }
 
 ::-webkit-scrollbar {
@@ -49,4 +50,12 @@
   ul {
     padding-inline-start: 24px;
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
 }

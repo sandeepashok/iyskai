@@ -19,6 +19,7 @@ const StyButton = styled.button`
   width: 146px;
   height: 40px;
   margin-top: 8px;
+  letter-spacing: initial;
   &:hover {
     box-shadow: 0px 16px 32px 0px var(--color-shadow);
     transform: translate(0px, -2px);

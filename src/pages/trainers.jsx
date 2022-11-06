@@ -36,7 +36,7 @@ const PillButtons = styled.button`
   min-height: 40px;
   color: #ffffff;
   user-select: none;
-  background-color: #272727;
+  background-color: #181818;
   margin-right: 8px;
   margin-bottom: 8px;
   transition: box-shadow 300ms ease-in-out 0s, transform 300ms ease-in-out 0s,
@@ -67,7 +67,7 @@ const TrainersContainer = styled.div`
 
 const Card = styled.div`
   display: flex;
-  background: #272727;
+  background: #181818;
   padding: 16px;
   justify-content: center;
   flex-direction: column;
