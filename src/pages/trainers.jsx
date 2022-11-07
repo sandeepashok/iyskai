@@ -77,6 +77,38 @@ const Card = styled.div`
   margin-right: 16px;
 `;
 
+const mapObj = {
+  Karnataka: "/assets/state/karnataka.png",
+  Delhi: "/assets/state/delhi.png",
+  Punjab: "/assets/state/punjab.png",
+  "Andra Pradesh": "/assets/state/andhrapradesh.png",
+  "Arunachal Pradesh": "/assets/state/arunachal.png",
+  Assam: "/assets/state/assam.png",
+  Bihar: "/assets/state/bihar.png",
+  Chhattisgarh: "/assets/state/chhattisgarh.png",
+  Goa: "/assets/state/goa.png",
+  Gujarat: "/assets/state/gujarat.png",
+  Haryana: "/assets/state/haryana.png",
+  "Himachal Pradesh": "/assets/state/himachal.png",
+  "Jammu and Kashmir": "/assets/state/jnk.png",
+  Jarkhand: "/assets/state/jarkhand.png",
+  Kerala: "/assets/state/kerala.png",
+  "Madhya Pradesh": "/assets/state/madhyapradesh.png",
+  Maharashtra: "/assets/state/maharastra.png",
+  Meghalaya: "/assets/state/meghalaya.png",
+  Mizoram: "/assets/state/mizoram.png",
+  Nagaland: "/assets/state/nagaland.png",
+  Orrisa: "/assets/state/orrisa.png",
+  Rajasthan: "/assets/state/rajasthan.png",
+  Sikkim: "/assets/state/sikkim.png",
+  "Tamil Nadu": "/assets/state/tamilnadu.png",
+  Telangana: "/assets/state/telangana.png",
+  Tripura: "/assets/state/tripura.png",
+  Uttarakhand: "/assets/state/uttarakhand.png",
+  "Uttar Pradesh": "/assets/state/uttarpradesh.png",
+  "West bengal": "/assets/state/westbengal.png",
+};
+
 const Trainers = ({ setData }) => {
   const { trainers } = useContext(TrainersContext) || {};
   const [state, setState] = useState("select");
