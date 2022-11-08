@@ -24,34 +24,34 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
   border: 5px solid #181818;
-  max-width: 900px;
+  max-width: 700px;
   @media (max-width: 500px) {
     max-width: 95vw;
     padding: 0;
   }
 `;
 
-const Camp = ({ setData }) => {
-  const { camp } = useContext(TrainersContext) || {};
+const Tournament = ({ setData }) => {
+  const { tournament } = useContext(TrainersContext) || {};
   const loadData = async () => {
     const response = await fetchData();
     setData(response);
   };
   useEffect(() => {
-    if (!camp) {
+    if (!tournament) {
       loadData();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [camp]);
+  }, [tournament]);
 
   return (
     <Pagecontainter>
-      <PageHeading>Camp</PageHeading>
-      {!camp ||
-        (camp?.length < 1 ? (
-          <>No camps currently</>
+      <PageHeading>Tournament</PageHeading>
+      {!tournament ||
+        (tournament?.length < 1 ? (
+          <>No Tournaments currently</>
         ) : (
-          camp?.reverse().map((img, index) => (
+          tournament?.map((img, index) => (
             <ImageContainer key={index}>
               <Image src={img} alt="ad" />
             </ImageContainer>
@@ -61,4 +61,4 @@ const Camp = ({ setData }) => {
   );
 };
 
-export default Camp;
+export default Tournament;

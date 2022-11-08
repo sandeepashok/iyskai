@@ -24,16 +24,20 @@ export const fetchData = async () => {
 const formatData = (response) => {
   const result = {
     trainers: [],
+    camp: [],
+    tournament: [],
+    gallery: [],
   };
 
   response.items.forEach((data) => {
-    if (data.sys.contentType.sys.id === "siteConfig") {
-      result["siteConfig"] = data.fields;
-    } else {
+    if (data.sys.contentType.sys.id === "trainer") {
       result.trainers.push({
         ...data.fields,
-        content: data.fields.trainerContent.content[0].content[0].value,
       });
+    } else if (data.sys.contentType.sys.id === "others") {
+      result["siteConfig"] = data.fields;
+    } else {
+      result[data.sys.contentType.sys.id].unshift(data.fields.link);
     }
   });
 

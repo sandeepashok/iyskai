@@ -78,35 +78,35 @@ const Card = styled.div`
 `;
 
 const mapObj = {
-  Karnataka: "/assets/state/karnataka.png",
-  Delhi: "/assets/state/delhi.png",
-  Punjab: "/assets/state/punjab.png",
-  "Andra Pradesh": "/assets/state/andhrapradesh.png",
-  "Arunachal Pradesh": "/assets/state/arunachal.png",
-  Assam: "/assets/state/assam.png",
-  Bihar: "/assets/state/bihar.png",
-  Chhattisgarh: "/assets/state/chhattisgarh.png",
-  Goa: "/assets/state/goa.png",
-  Gujarat: "/assets/state/gujarat.png",
-  Haryana: "/assets/state/haryana.png",
-  "Himachal Pradesh": "/assets/state/himachal.png",
-  "Jammu and Kashmir": "/assets/state/jnk.png",
-  Jarkhand: "/assets/state/jarkhand.png",
-  Kerala: "/assets/state/kerala.png",
-  "Madhya Pradesh": "/assets/state/madhyapradesh.png",
-  Maharashtra: "/assets/state/maharastra.png",
-  Meghalaya: "/assets/state/meghalaya.png",
-  Mizoram: "/assets/state/mizoram.png",
-  Nagaland: "/assets/state/nagaland.png",
-  Orrisa: "/assets/state/orrisa.png",
-  Rajasthan: "/assets/state/rajasthan.png",
-  Sikkim: "/assets/state/sikkim.png",
-  "Tamil Nadu": "/assets/state/tamilnadu.png",
-  Telangana: "/assets/state/telangana.png",
-  Tripura: "/assets/state/tripura.png",
-  Uttarakhand: "/assets/state/uttarakhand.png",
-  "Uttar Pradesh": "/assets/state/uttarpradesh.png",
-  "West bengal": "/assets/state/westbengal.png",
+  Karnataka: "/assets/states/karnataka.png",
+  Delhi: "/assets/states/delhi.png",
+  Punjab: "/assets/states/punjab.png",
+  "Andra Pradesh": "/assets/states/andhrapradesh.png",
+  "Arunachal Pradesh": "/assets/states/arunachal.png",
+  Assam: "/assets/states/assam.png",
+  Bihar: "/assets/states/bihar.png",
+  Chhattisgarh: "/assets/states/chhattisgarh.png",
+  Goa: "/assets/states/goa.png",
+  Gujarat: "/assets/states/gujarat.png",
+  Haryana: "/assets/states/haryana.png",
+  "Himachal Pradesh": "/assets/states/himachal.png",
+  "Jammu and Kashmir": "/assets/states/jnk.png",
+  Jarkhand: "/assets/states/jarkhand.png",
+  Kerala: "/assets/states/kerala.png",
+  "Madhya Pradesh": "/assets/states/madhyapradesh.png",
+  Maharashtra: "/assets/states/maharastra.png",
+  Meghalaya: "/assets/states/meghalaya.png",
+  Mizoram: "/assets/states/mizoram.png",
+  Nagaland: "/assets/states/nagaland.png",
+  Orrisa: "/assets/states/orrisa.png",
+  Rajasthan: "/assets/states/rajasthan.png",
+  Sikkim: "/assets/states/sikkim.png",
+  "Tamil Nadu": "/assets/states/tamilnadu.png",
+  Telangana: "/assets/states/telangana.png",
+  Tripura: "/assets/states/tripura.png",
+  Uttarakhand: "/assets/states/uttarakhand.png",
+  "Uttar Pradesh": "/assets/states/uttarpradesh.png",
+  "West bengal": "/assets/states/westbengal.png",
 };
 
 const Trainers = ({ setData }) => {
@@ -160,6 +160,40 @@ const Trainers = ({ setData }) => {
 
   return (
     <PageContainter>
+      <div style={{ textAlign: "center", marginBottom: "32px" }}>
+        <h2>International Yamato Shotokan</h2>
+        <h2>Karate Association of India</h2>
+        <h6>Affiliate to: Karate Association of India (KAI)</h6>
+        <h6>
+          Recognixed by the: THE GOVT OF INDIA (MINISTRY OF YOUTH AFFAIRS &
+          SPORTS)
+        </h6>
+        <h6>
+          Member: World Karate Federation (WKF) & Asian Karate Do Federation
+          (AKF)
+        </h6>
+        <h6>Recognized by the International Olympic Committee (IOC)</h6>
+        <h6>
+          Member : Sports Accord & International World Games Association (IWGA)
+        </h6>
+      </div>
+
+      {state === "select" && (
+        <div>
+          <img
+            alt="map"
+            src={"/assets/states/india.png"}
+            width="300px"
+            style={{
+              display: "block",
+              margin: "auto",
+              borderRadius: "8px",
+              marginTop: "16px",
+            }}
+          />
+        </div>
+      )}
+
       <div style={{ width: "100%" }}>
         <label
           htmlFor="select1"
@@ -174,18 +208,20 @@ const Trainers = ({ setData }) => {
           Select state
         </label>
       </div>
+
       <Select value={state} onChange={onChange}>
         <option value="select">Select a state</option>
         {states?.map((state) => (
           <option value={state}>{state}</option>
         ))}
       </Select>
+
       {state !== "select" && (
         <>
           <div>
             <img
               alt="map"
-              src="https://i.ibb.co/sbSrBL5/karnataka.png"
+              src={mapObj[state]}
               width="300px"
               style={{
                 display: "block",

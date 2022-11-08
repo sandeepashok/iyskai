@@ -12,6 +12,7 @@ import Trainer from "./pages/trainer";
 import Camp from "./pages/camp";
 import PhotoGallery from "./pages/photo-gallery";
 import Contact from "./pages/contact";
+import Tournament from "./pages/tournament";
 export const TrainersContext = createContext([]);
 
 function App() {
@@ -24,9 +25,6 @@ function App() {
     loadData();
   }, []);
 
-  const campData = { title: "Camp", image: "https://cdn.pixabay.com/photo/2017/09/05/10/55/karate-2717178_960_720.jpg" }
-  const tournamentData = { title: "Tournament", image: "https://cdn.pixabay.com/photo/2022/09/24/21/09/karate-7477212__340.jpg" }
-
   return (
     <>
       <div className="App">
@@ -36,26 +34,25 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/camp" element={<Camp info={campData} />} />
-              <Route path="/tournament" element={<Camp info={tournamentData} />} />
-              {/* <Route path="/trainers" element={<Trainers setData={setData} />}>
-              <Route path=":id" element={<Trainer />} />
-              <Route index element={<Trainers setData={setData} />} />
-            </Route> */}
+              <Route path="/camp" element={<Camp setData={setData} />} />
+              <Route
+                path="/tournament"
+                element={<Tournament setData={setData} />}
+              />
               <Route path="/trainers/:id" element={<Trainer />} />
               <Route
                 path="/trainers"
                 index
                 element={<Trainers setData={setData} />}
               />
-              <Route path="photo-gallery" element={<PhotoGallery />} />
-              {/* <Route path="video-gallery" element={<></>} /> */}
+              <Route
+                path="photo-gallery"
+                element={<PhotoGallery setData={setData} />}
+              />
               <Route path="dojo-etiquette" element={<Dojo />} />
               <Route path="contact" element={<Contact />} />
             </Routes>
           </Router>
-
-
         </TrainersContext.Provider>
       </div>
       <Footer />

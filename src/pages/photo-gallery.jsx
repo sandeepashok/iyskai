@@ -1,4 +1,7 @@
 import styled from "@emotion/styled";
+import { useContext, useEffect } from "react";
+import { TrainersContext } from "../App";
+import { fetchData } from "../fetch";
 import { PageContainter, PageHeading } from "./about";
 
 const Pagecontainter = styled(PageContainter)`
@@ -26,23 +29,24 @@ const Image = styled.img`
   object-fit: contain;
 `;
 
-const photos = [
-  "https://cdn.pixabay.com/photo/2017/09/05/10/55/karate-2717178_960_720.jpg",
-  "https://cdn.pixabay.com/photo/2022/09/24/21/09/karate-7477212__340.jpg",
-  "https://cdn.pixabay.com/photo/2017/09/05/10/55/karate-2717178_960_720.jpg",
-  "https://cdn.pixabay.com/photo/2022/09/24/21/09/karate-7477212__340.jpg",
-  "https://cdn.pixabay.com/photo/2017/09/05/10/55/karate-2717178_960_720.jpg",
-  "https://cdn.pixabay.com/photo/2022/09/24/21/09/karate-7477212__340.jpg",
-  "https://cdn.pixabay.com/photo/2017/09/05/10/55/karate-2717178_960_720.jpg",
-  "https://cdn.pixabay.com/photo/2022/09/24/21/09/karate-7477212__340.jpg",
-];
+const PhotoGallery = ({ setData }) => {
+  const { gallery } = useContext(TrainersContext) || {};
+  const loadData = async () => {
+    const response = await fetchData();
+    setData(response);
+  };
+  useEffect(() => {
+    if (!gallery) {
+      loadData();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [gallery]);
 
-const PhotoGallery = () => {
   return (
     <Pagecontainter>
       <PageHeading>Photo Gallery</PageHeading>
       <GalleryContainer>
-        {photos.map((image, index) => {
+        {gallery?.map((image, index) => {
           return <Image src={image} alt="gallery image" key={index} />;
         })}
       </GalleryContainer>
