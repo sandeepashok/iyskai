@@ -162,7 +162,12 @@ const Home = () => {
         <Banner>
           <StyBannerImage src="/assets/hero.png" />
           <Flex>
-            <Buttons Outlined>Start now</Buttons>
+            <a
+              href="https://forms.gle/m4KN4HEKtNX7bxiz9"
+              target="https://docs.google.com/forms/d/e/1FAIpQLSdRUPJaYhUZqRKNt7lBsHNtVvONSoLmQ7JMeVXsVK-z37WOMg/viewform?usp=sf_link"
+            >
+              <Buttons Outlined>Start now</Buttons>
+            </a>
             <Link to="trainers">
               <Buttons Outlined>Find trainers</Buttons>
             </Link>
