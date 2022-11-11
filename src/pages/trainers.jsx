@@ -77,6 +77,10 @@ const Card = styled.div`
   margin-right: 16px;
 `;
 
+const H6 = styled.h6`
+  margin: 12px;
+`;
+
 const mapObj = {
   Karnataka: "/assets/states/karnataka.png",
   Delhi: "/assets/states/delhi.png",
@@ -163,19 +167,20 @@ const Trainers = ({ setData }) => {
       <div style={{ textAlign: "center", marginBottom: "32px" }}>
         <h2>International Yamato Shotokan</h2>
         <h2>Karate Association of India</h2>
-        <h6>Affiliate to: Karate Association of India (KAI)</h6>
-        <h6>
+        <br />
+        <H6>Affiliate to: Karate India Organisation (KIO)</H6>
+        <H6>
           Recognixed by the: THE GOVT OF INDIA (MINISTRY OF YOUTH AFFAIRS &
           SPORTS)
-        </h6>
-        <h6>
+        </H6>
+        <H6>
           Member: World Karate Federation (WKF) & Asian Karate Do Federation
           (AKF)
-        </h6>
-        <h6>Recognized by the International Olympic Committee (IOC)</h6>
-        <h6>
+        </H6>
+        <H6>Recognized by the International Olympic Committee (IOC)</H6>
+        <H6>
           Member : Sports Accord & International World Games Association (IWGA)
-        </h6>
+        </H6>
       </div>
 
       {state === "select" && (

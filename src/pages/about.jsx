@@ -51,6 +51,7 @@ export const Image = styled.img`
   height: auto;
   border: 5px solid #ffffff;
   max-width: 80vw;
+  border-radius: 16px;
 `;
 
 export const ImageAndNameHolder = styled.div`
