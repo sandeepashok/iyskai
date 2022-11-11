@@ -12,6 +12,7 @@ const Card = styled.div`
   @media (max-width: 500px) {
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
   }
 `;
 
@@ -67,7 +68,7 @@ const Trainer = ({ setData }) => {
             alt={currentTrainer?.name}
           ></Image>
         </ImageWrapper>
-        <div style={{ margin: "0 16px" }}>
+        <div style={{ margin: "0 16px", marginLeft: "32px" }}>
           <div style={{ margin: "8px" }}>
             <b style={{ display: "inline" }}>Name: </b>
             <Ptag style={{ display: "inline" }}>{currentTrainer.name}</Ptag>
@@ -159,6 +160,25 @@ const Trainer = ({ setData }) => {
             <Ptag style={{ display: "inline" }}>
               {currentTrainer.ifPractisingAnyOtherMartialArtsNameThem}
             </Ptag>
+          </div>
+          <div style={{ margin: "8px" }}>
+            <b style={{ display: "inline" }}>Map Link: </b>
+            <a
+              style={{
+                display: "inline",
+                cursor: "pointer",
+                textDecoration: "none",
+                color: "white",
+                "&:hover": {
+                  background: "#318EFD",
+                },
+              }}
+              href={currentTrainer.mapLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {currentTrainer.mapLink}
+            </a>
           </div>
         </div>
       </Card>

@@ -21,7 +21,7 @@ const DrawerContainer = styled.div`
     width: 1px;
   }
   @media (max-width: 429px) {
-    width: 100vw;
+    width: 85vw;
   }
 `;
 
@@ -44,6 +44,9 @@ const StyLinks = styled(Link)`
   &:hover {
     background-color: #3f3f3f;
     border-radius: 10px 2px;
+  }
+  @media (max-width: 429px) {
+    margin: 0.2rem 2rem;
   }
 `;
 
@@ -97,9 +100,9 @@ const Drawer = ({ onClose }) => {
         <StyLinks to="/photo-gallery" onClick={onClose}>
           Photo Gallery
         </StyLinks>
-        {/* <StyLinks to="/video-gallery" onClick={onClose}>
+        <StyLinks to="/video-gallery" onClick={onClose}>
           Video Gallery
-        </StyLinks> */}
+        </StyLinks>
         <br />
         <StyLinks to="/dojo-etiquette" onClick={onClose}>
           Dojo Etiquette
