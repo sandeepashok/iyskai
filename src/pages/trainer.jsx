@@ -71,48 +71,50 @@ const Trainer = ({ setData }) => {
         <div style={{ margin: "0 16px", marginLeft: "32px" }}>
           <div style={{ margin: "8px" }}>
             <b style={{ display: "inline" }}>Name: </b>
-            <Ptag style={{ display: "inline" }}>{currentTrainer.name}</Ptag>
+            <Ptag style={{ display: "inline" }}>{currentTrainer?.name}</Ptag>
           </div>
           <div style={{ margin: "8px" }}>
             <b style={{ display: "inline" }}>City: </b>
-            <Ptag style={{ display: "inline" }}>{currentTrainer.city}</Ptag>
+            <Ptag style={{ display: "inline" }}>{currentTrainer?.city}</Ptag>
           </div>
           <div style={{ margin: "8px" }}>
             <b style={{ display: "inline" }}>District: </b>
-            <Ptag style={{ display: "inline" }}>{currentTrainer.district}</Ptag>
+            <Ptag style={{ display: "inline" }}>
+              {currentTrainer?.district}
+            </Ptag>
           </div>
           <div style={{ margin: "8px" }}>
             <b style={{ display: "inline" }}>Contact No: </b>
             <Ptag style={{ display: "inline" }}>
-              {currentTrainer.contactNo}
+              {currentTrainer?.contactNo}
             </Ptag>
           </div>
           <div style={{ margin: "8px" }}>
             <b style={{ display: "inline" }}>Mail Id: </b>
-            <Ptag style={{ display: "inline" }}>{currentTrainer.mailId}</Ptag>
+            <Ptag style={{ display: "inline" }}>{currentTrainer?.mailId}</Ptag>
           </div>
           <div style={{ margin: "8px" }}>
             <b style={{ display: "inline" }}>Year Of Joining Karate: </b>
             <Ptag style={{ display: "inline" }}>
-              {currentTrainer.yearOfJoiningKarate}
+              {currentTrainer?.yearOfJoiningKarate}
             </Ptag>
           </div>
           <div style={{ margin: "8px" }}>
             <b style={{ display: "inline" }}>Year Of Black Belt: </b>
             <Ptag style={{ display: "inline" }}>
-              {currentTrainer.yearOfOfBlackBelt}
+              {currentTrainer?.yearOfOfBlackBelt}
             </Ptag>
           </div>
           <div style={{ margin: "8px" }}>
             <b style={{ display: "inline" }}>Present Dan: </b>
             <Ptag style={{ display: "inline" }}>
-              {currentTrainer.presentDan}
+              {currentTrainer?.presentDan}
             </Ptag>
           </div>
           <div style={{ margin: "8px" }}>
             <b style={{ display: "inline" }}>Coach Liscence: </b>
             <Ptag style={{ display: "inline" }}>
-              {currentTrainer.coachLiscence}
+              {currentTrainer?.coachLiscence}
             </Ptag>
           </div>
           <div style={{ margin: "8px" }}>
@@ -120,37 +122,37 @@ const Trainer = ({ setData }) => {
               Referee And Judge Certification:
             </b>
             <Ptag style={{ display: "inline" }}>
-              {currentTrainer.refreeAndJudgeCertification}
+              {currentTrainer?.refreeAndJudgeCertification}
             </Ptag>
           </div>
           <div style={{ margin: "8px" }}>
             <b style={{ display: "inline" }}>Events Organised: </b>
             <Ptag style={{ display: "inline" }}>
-              {currentTrainer.eventsOrganised}
+              {currentTrainer?.eventsOrganised}
             </Ptag>
           </div>
           <div style={{ margin: "8px" }}>
             <b style={{ display: "inline" }}>Awards If Any: </b>
             <Ptag style={{ display: "inline" }}>
-              {currentTrainer.awardsIfAny}
+              {currentTrainer?.awardsIfAny}
             </Ptag>
           </div>
           <div style={{ margin: "8px" }}>
             <b style={{ display: "inline" }}>Achievements: </b>
             <Ptag style={{ display: "inline" }}>
-              {currentTrainer.achievements}
+              {currentTrainer?.achievements}
             </Ptag>
           </div>
           <div style={{ margin: "8px" }}>
             <b style={{ display: "inline" }}>Speciality In: </b>
             <Ptag style={{ display: "inline" }}>
-              {currentTrainer.specialityIn}
+              {currentTrainer?.specialityIn}
             </Ptag>
           </div>
           <div style={{ margin: "8px" }}>
             <b style={{ display: "inline" }}>Classes Handling & Timings: </b>
             <Ptag style={{ display: "inline" }}>
-              {currentTrainer.classesHandlingTimings}
+              {currentTrainer?.classesHandlingTimings}
             </Ptag>
           </div>
           <div style={{ margin: "8px" }}>
@@ -158,7 +160,7 @@ const Trainer = ({ setData }) => {
               If Practising Any Other Martial Arts, Name Them:{" "}
             </b>
             <Ptag style={{ display: "inline" }}>
-              {currentTrainer.ifPractisingAnyOtherMartialArtsNameThem}
+              {currentTrainer?.ifPractisingAnyOtherMartialArtsNameThem}
             </Ptag>
           </div>
           <div style={{ margin: "8px" }}>
@@ -173,11 +175,11 @@ const Trainer = ({ setData }) => {
                   background: "#318EFD",
                 },
               }}
-              href={currentTrainer.mapLink}
+              href={currentTrainer?.mapLink}
               target="_blank"
               rel="noreferrer"
             >
-              {currentTrainer.mapLink}
+              {currentTrainer?.mapLink}
             </a>
           </div>
         </div>
