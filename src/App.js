@@ -13,6 +13,7 @@ import Camp from "./pages/camp";
 import PhotoGallery from "./pages/photo-gallery";
 import Contact from "./pages/contact";
 import Tournament from "./pages/tournament";
+import VideoGallery from "./pages/video-gallery";
 export const TrainersContext = createContext([]);
 
 function App() {
@@ -48,6 +49,10 @@ function App() {
               <Route
                 path="photo-gallery"
                 element={<PhotoGallery setData={setData} />}
+              />
+              <Route
+                path="video-gallery"
+                element={<VideoGallery />}
               />
               <Route path="dojo-etiquette" element={<Dojo />} />
               <Route path="contact" element={<Contact />} />
