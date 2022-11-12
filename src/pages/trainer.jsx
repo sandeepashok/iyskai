@@ -119,7 +119,7 @@ const Trainer = ({ setData }) => {
           </div>
           <div style={{ margin: "8px" }}>
             <b style={{ display: "inline" }}>
-              Referee And Judge Certification:
+              Referee And Judge Certification:{" "}
             </b>
             <Ptag style={{ display: "inline" }}>
               {currentTrainer?.refreeAndJudgeCertification}
